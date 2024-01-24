@@ -19,7 +19,7 @@ const ContactBar = () => {
   };
 
   return (
-    <div className="w-50 bg-white p-4 border-r-2 border-blue-500">
+    <div className="w-1/5 flex-shrink-0 bg-white p-4 border-r-2 border-blue-500">
       <div className="mb-4 flex flex-col items-center border-b">
         <div className="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mb-2">
           {/* Profile Icon */}

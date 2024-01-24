@@ -1,5 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 import { Paperclip, Send, Clock, Smile, Hash, Sparkle } from 'lucide-react';
+import { toast } from 'sonner';
+
 
 const SendMessageForm = () => {
   const [message, setMessage] = useState('');
@@ -9,6 +11,13 @@ const SendMessageForm = () => {
     // Logic to send message
     console.log(message);
     setMessage(''); // Clear the input after sending
+    toast("Message has been sent", {
+      description: message,
+      action: {
+        label: "Undo",
+        onClick: () => console.log("Undo"),
+      },
+    })
   };
 
   return (

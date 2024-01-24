@@ -5,10 +5,12 @@ import {
     Search,
     Activity,
     BarChart2,
+    Info,
     Inbox,
     Heart,
     PlusCircle,
     Users,
+    Gift,
   } from 'lucide-react';
   import { Button } from '@/components/ui/button';
   import { Separator } from '@/components/ui/separator';
@@ -102,6 +104,15 @@ import {
             </Button>
           </div>
         </div>
+        {/* Refer and Earn section */}
+      <div className="mt-auto">
+        <Separator className="my-1" />
+        <Button color="transparent" className="flex items-center justify-start px-3 py-3 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors">
+          <Gift size="18" className="text-gray-700" />
+          <span className="text-xs ml-1">Refer and earn</span>
+          <Info size="10" className="text-gray-700 ml-8" />
+        </Button>
+      </div>
       </nav>
     );
   };

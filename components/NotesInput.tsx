@@ -1,19 +1,24 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { AtSign, Smile, Send } from 'lucide-react';
+import { toast } from 'sonner';
 
 const NotesInput = () => {
   const [note, setNote] = useState('');
 
-  const handleNoteChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setNote(event.target.value);
-  };
-
-  const handleNoteSubmit = () => {
+  const handleNoteSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     // Handle the submission of the note
     console.log(note);
     setNote(''); // Clear the note input after submit
+    toast("Note has been saved", {
+      description: "note",
+      action: {
+        label: "Undo",
+        onClick: () => console.log("Undo"),
+      },
+    })
   };
 
   return (
